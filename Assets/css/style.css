@@ -1,0 +1,31 @@
+.jumbotron {
+    background-color: #6d38b8;
+    color: #f7d206;
+    font-family: 'Courgette', cursive;
+}
+
+.lead {
+    font-size: 28px;
+    font-family: 'Courgette', cursive;
+}
+
+.sport-img, .scoreboard {
+    border: 2px solid #6d38b8;
+    padding: 40px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Acme', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
