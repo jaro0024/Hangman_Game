@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Style Sheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="Assets/CSS/style.css">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
         <title>Hangman Game</title>
     </head>
 
     <body>
+        <!-- Header -->
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
@@ -22,24 +26,48 @@
                 </div>
             </div>
         </div>
-        <div class="container game" align="center">
+        <!-- Main Content -->
+        <div class="container" align="center" id="game">
             <div class="row">
                 <div class="col-md-6 sport-img">
                     <img src="Assets/images/Sports_Theme.jpg" class="img-fluid" alt="Sports Theme"/>
                 </div>
                 <div class="col-md-6 scoreboard">
-                    <p>Press any key to start!</p>
-                    <p>Wins</p>
-                    <p>Current Word</p>
-                    <p>Number of Guesses Remaining</p>     
-                    <p>Letters Guessed</p>                      
+                    <div>
+                        <p>Press any key to start!</p>
+                    </div>
+                    <div>
+                        <p >Wins: </p>
+                        <span id="winCount"></span>
+                    </div>
+                    <br>
+                    <div>
+                        <p>Current Word: </p>
+                        <span id="word"></span>
+                    </div>
+                    <br>
+                    <div>
+                        <p>Number of Guesses Remaining: </p> 
+                        <span id="lives">10</span>
+                    </div>   
+                    <br>
+                    <div> 
+                        <p>Letters Guessed: </p>   
+                        <span id="letters"></span>
+                    </div>                   
                 </div>
-        
             </div>
         </div>
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <span><small>&copy; Copyright 2017 Daniela Jaros</small></span>
+            </div>
+        </footer>
 
-
+        <!-- My JavaSccript file -->
+        <script type="text/javascript" src="Assets/javascript/game.js"></script>
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
