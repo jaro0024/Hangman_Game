@@ -6,8 +6,8 @@ html {
     background-color: #6d38b8;
     color: #f7d206;
     font-family: 'Courgette', cursive;
-    height: 160px;
-    padding-top:10px;
+    height: 140px;
+    padding-top:5px;
 }
 
 .lead {
@@ -33,7 +33,7 @@ span {
 }
 
 #game {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .footer {

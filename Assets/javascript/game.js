@@ -1,6 +1,7 @@
 
 // need to end game, reset and restart while keeping the score
 // need to stop remaining guesses at 0 (probably by ending the game, this will be fixed)
+// need to make only possible to press letters
 
 
 
@@ -14,6 +15,7 @@ var wordsArray = ["baseball", "basketball", "football", "golf", "gymnastics", "h
 
 var randomWord;
 var remainingGuesses = 6;
+var wrongLetters = [];
 var guessedLetters = [];
 var underscore = [];
 var correctGuess = 0;
@@ -31,9 +33,9 @@ for (var i = 0; i < randomWord.length; i++) {
 }
 }
 
-// To get user's guesses and check if it is correct
+// To get user's guesses and check if it is correct. If it is correct, it replaces the underscore with the letter and correct guesses goes up by 1.
 document.onkeypress = function (event) {
-    guess = String.fromCharCode(event.keyCode).toLowerCase();
+    guess = String.fromCharCode(event.keyCode).toLowerCase();    
     if (randomWord.indexOf(guess) > -1) {
         for (var i = 0; i < randomWord.length; i++) {
             if (randomWord[i] === guess) {
@@ -44,33 +46,50 @@ document.onkeypress = function (event) {
             }
         }
     }
+
+    // If the letter guessed is wrong, it goes to the wrongLetters array and remaining guesses decrease by 1. That letter cannot be guessed again.
     else {
-        guessedLetters.push(guess);
+        for (i = 0; i < wrongLetters.length; i++) {
+            if (wrongLetters[i] === guess) {
+                return;
+            }
+        }
+        wrongLetters.push(guess);
         remainingGuesses--;
         winLose();
-        document.getElementById("guessed-letters").innerHTML = guessedLetters;
+        document.getElementById("wrong-letters").innerHTML = wrongLetters;
         document.getElementById("remaining-guesses").innerHTML = remainingGuesses;
-    }
+        }
 }
 
 // Win / lose function
 
+// If correct guess count matches the length of the random word to be guessed, player wins. Wins count goes up, the game resets and restarts.
 function winLose() {
     if (correctGuess === randomWord.length) {
         wins++;
         document.getElementById("total-wins").innerHTML = wins;
-        // startGame();
+        // resetGame();
     }
 
+// If remaining guesses goes down to 0, player loses. Losses count goes up, the game resets and restarts.
     else if (remainingGuesses === 0) {
         losses++;
         document.getElementById("total-losses").innerHTML = losses;
+        // resetGame();
     }
-
-
 }
 
 // Reset the game
+
+// function resetGame() {
+//     var remainingGuesses = 6;
+//     var wrongLetters = [];
+//     var underscore = [];
+//     var correctGuess = 0;
+//     document.getElementById("current-word").innerHTML = " ";
+//     startGame();
+// }
 
 
 
