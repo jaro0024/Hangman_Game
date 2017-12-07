@@ -20,8 +20,8 @@ function startGame() {
     console.log(randomWord);
     for (var i = 0; i < randomWord.length; i++) {
         underscore.push('_');
-        document.getElementById("current-word").innerHTML = underscore.join(" ");
     }
+    document.getElementById("current-word").innerHTML = underscore.join(" ");
 }
 
 // To get user's guesses and check if it is correct. If it is correct, it replaces the underscore with the letter and correct guesses goes up by 1.
@@ -33,9 +33,9 @@ document.onkeypress = function (event) {
             if (randomWord[i] === guess) {
                 underscore[i] = guess;
                 winLose();
-                document.getElementById("current-word").innerHTML = underscore.join(" ");
             }
         }
+        document.getElementById("current-word").innerHTML = underscore.join(" ");
     }
 
     // If the letter guessed is wrong, it goes to the wrongLetters array and remaining guesses decrease by 1. That letter cannot be guessed again.
@@ -50,7 +50,6 @@ document.onkeypress = function (event) {
         winLose();
         document.getElementById("wrong-letters").innerHTML = wrongLetters.join(" ");
         document.getElementById("remaining-guesses").innerHTML = remainingGuesses;
-
     }
 }
 
@@ -79,7 +78,9 @@ function resetGame() {
     remainingGuesses = 6;
     wrongLetters = [];
     underscore = [];
-    document.getElementById("current-word").innerHTML = " ";
+    document.getElementById("current-word").innerHTML = "";
+    document.getElementById("wrong-letters").innerHTML = "";
+    document.getElementById("remaining-guesses").innerHTML = remainingGuesses;
     startGame();
 }
 
