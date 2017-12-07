@@ -7,10 +7,9 @@ var wordsArray = ["baseball", "basketball", "football", "golf", "gymnastics", "h
     "soccer", "swimming", "tennis", "volleyball"];
 
 var randomWord;
-var remainingGuesses = 6;
+var remainingGuesses = 5;
 var wrongLetters = [];
 var underscore = [];
-var correctGuess = 0;
 var wins = 0;
 var losses = 0;
 var guess;
@@ -28,11 +27,11 @@ function startGame() {
 // To get user's guesses and check if it is correct. If it is correct, it replaces the underscore with the letter and correct guesses goes up by 1.
 document.onkeypress = function (event) {
     guess = String.fromCharCode(event.keyCode).toLowerCase();
+    console.log(guess);
     if (randomWord.indexOf(guess) > -1) {
         for (var i = 0; i < randomWord.length; i++) {
             if (randomWord[i] === guess) {
                 underscore[i] = guess;
-                correctGuess++;
                 winLose();
                 document.getElementById("current-word").innerHTML = underscore.join(" ");
             }
@@ -51,6 +50,7 @@ document.onkeypress = function (event) {
         winLose();
         document.getElementById("wrong-letters").innerHTML = wrongLetters.join(" ");
         document.getElementById("remaining-guesses").innerHTML = remainingGuesses;
+
     }
 }
 
@@ -58,12 +58,12 @@ document.onkeypress = function (event) {
 
 // If correct guess count matches the length of the random word to be guessed, player wins. Wins count goes up, the game resets and restarts.
 function winLose() {
-    if (correctGuess === randomWord.length) {
+
+    if (underscore.join("") === randomWord) {
         wins++;
         document.getElementById("total-wins").innerHTML = wins;
         resetGame();
     }
-
     // If remaining guesses goes down to 0, player loses. Losses count goes up, the game resets and restarts.
     if (remainingGuesses === 0) {
         losses++;
@@ -76,19 +76,15 @@ function winLose() {
 
 function resetGame() {
     randomWord = "";
-    remainingGuesses = 6;
+    remainingGuesses = 5;
     wrongLetters = [];
     underscore = [];
-    correctGuess = 0;
     document.getElementById("current-word").innerHTML = " ";
     startGame();
 }
 
-// Main 
+// Main
 // ------------------------------------------------------
 
 // Calling function to start game
 startGame();
-
-
-
