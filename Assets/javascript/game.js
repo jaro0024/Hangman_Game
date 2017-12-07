@@ -7,7 +7,7 @@ var wordsArray = ["baseball", "basketball", "football", "golf", "gymnastics", "h
     "soccer", "swimming", "tennis", "volleyball"];
 
 var randomWord;
-var remainingGuesses = 5;
+var remainingGuesses = 6;
 var wrongLetters = [];
 var underscore = [];
 var wins = 0;
@@ -59,7 +59,7 @@ document.onkeypress = function (event) {
 // If correct guess count matches the length of the random word to be guessed, player wins. Wins count goes up, the game resets and restarts.
 function winLose() {
 
-    if (underscore.join("") === randomWord) {
+    if (underscore.join("") == randomWord) {
         wins++;
         document.getElementById("total-wins").innerHTML = wins;
         resetGame();
@@ -76,7 +76,7 @@ function winLose() {
 
 function resetGame() {
     randomWord = "";
-    remainingGuesses = 5;
+    remainingGuesses = 6;
     wrongLetters = [];
     underscore = [];
     document.getElementById("current-word").innerHTML = " ";
