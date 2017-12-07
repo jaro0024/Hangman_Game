@@ -82,11 +82,11 @@ function winLose() {
 // Reset the game
 
 function resetGame() {
-    var randomWord = "";
-    var remainingGuesses = 6;
-    var wrongLetters = [];
-    var underscore = [];
-    var correctGuess = 0;
+    randomWord = "";
+    remainingGuesses = 6;
+    wrongLetters = [];
+    underscore = [];
+    correctGuess = 0;
     document.getElementById("current-word").innerHTML = " ";
     startGame();
 }
