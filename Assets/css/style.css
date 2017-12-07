@@ -20,6 +20,12 @@ html {
     padding: 40px;
 }
 
+.reset-btn {
+    background-color: #6d38b8;
+    color: #f7d206;
+    font-weight: bold;
+}
+
 p {
     font-size: 24px;
     font-weight: bold;

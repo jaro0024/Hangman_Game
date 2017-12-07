@@ -79,6 +79,20 @@ function winLose() {
     }
 }
 
+// Reset button function - if user wants to start from beginning 
+
+// var resetButton = function() {
+//     randomWord = "";
+//     remainingGuesses = 6;
+//     wrongLetters = [];
+//     underscore = [];
+//     correctGuess = 0;
+//     wins = 0;
+//     losses = 0;
+//     document.getElementById("current-word").innerHTML = " ";
+    
+// }
+
 // Reset the game
 
 function resetGame() {
