@@ -1,11 +1,4 @@
 
-// need to end game, reset and restart while keeping the score
-// need to stop remaining guesses at 0 (probably by ending the game, this will be fixed)
-// need to make only possible to press letters
-
-
-
-
 // Global variables
 // ----------------------------------------------------
 
@@ -79,21 +72,7 @@ function winLose() {
     }
 }
 
-// Reset button function - if user wants to start from beginning 
-
-// var resetButton = function() {
-//     randomWord = "";
-//     remainingGuesses = 6;
-//     wrongLetters = [];
-//     underscore = [];
-//     correctGuess = 0;
-//     wins = 0;
-//     losses = 0;
-//     document.getElementById("current-word").innerHTML = " ";
-    
-// }
-
-// Reset the game
+// Reset and restart game, but keeping the score
 
 function resetGame() {
     randomWord = "";
@@ -104,8 +83,6 @@ function resetGame() {
     document.getElementById("current-word").innerHTML = " ";
     startGame();
 }
-
-
 
 // Main 
 // ------------------------------------------------------

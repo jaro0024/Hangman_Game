@@ -1,88 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Style Sheets -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Hangman Game</title>
-    </head>
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 
-    <body>
-        <!-- Header -->
+    <title>Hangman Game</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3 text-center">Hangman</h1>
+                    <p class="lead text-center">Sports Edition</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="container" align="center" id="game">
         <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1 class="display-3 text-center">Hangman</h1>
-                        <p class="lead text-center">Sports Edition</p>
-                    </div>
+            <div class="col-md-6 sport-img">
+                <img src="Assets/images/Sports_Theme.jpg" class="img-fluid" alt="Sports Theme" />
+                <br>
+                <br>
+                <div>
+                    <p class="start-game">Press any letter key to start!</p>
+                </div>
+            </div>
+            <div class="col-md-6 scoreboard">
+                <div>
+                    <p>Current Word: </p>
+                    <span id="current-word">_ _ _ _ _ _</span>
+                </div>
+                <br>
+                <div>
+                    <p>Guesses Remaining: </p>
+                    <span id="remaining-guesses">6</span>
+                </div>
+                <br>
+                <div>
+                    <p>Wrong Letters Guessed: </p>
+                    <span id="wrong-letters"></span>
+                </div>
+                <br>
+                <div>
+                    <p>Wins: </p>
+                    <span id="total-wins">0</span>
+                </div>
+                <br>
+                <div>
+                    <p>Losses: </p>
+                    <span id="total-losses">0</span>
                 </div>
             </div>
         </div>
-        <!-- Main Content -->
-        <div class="container" align="center" id="game">
-            <div class="row">
-                <div class="col-md-6 sport-img">
-                    <img src="Assets/images/Sports_Theme.jpg" class="img-fluid" alt="Sports Theme"/>
-                    <br>
-                    <br>
-                    <div>
-                        <p>Press any letter key to start!</p>
-                    </div>
-                    <br>
-                    <div>
-                        <button type="button" class="btn btn-secondary reset-btn">RESET GAME</button>
-                    </div>
-                </div>
-                <div class="col-md-6 scoreboard">
-                    <div>
-                        <p>Current Word: </p>
-                        <span id="current-word">_ _ _ _ _ _</span>
-                    </div>
-                    <br>
-                    <div>
-                        <p>Guesses Remaining: </p> 
-                        <span id="remaining-guesses">6</span>
-                    </div>   
-                    <br>
-                    <div> 
-                        <p>Wrong Letters Guessed: </p>   
-                        <span id="wrong-letters"></span>
-                    </div>    
-                    <br>
-                    <div>
-                        <p >Wins: </p>
-                        <span id="total-wins">0</span>
-                    </div>
-                    <br>
-                    <div>
-                        <p >Losses: </p>
-                        <span id="total-losses">0</span>
-                    </div>             
-                </div>
-            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>
+                <small>&copy; Copyright 2017 Daniela Jaros</small>
+            </span>
         </div>
+    </footer>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <span><small>&copy; Copyright 2017 Daniela Jaros</small></span>
-            </div>
-        </footer>
+    <!-- My JavaSccript file -->
+    <script type="text/javascript" src="Assets/javascript/game.js"></script>
 
-        <!-- My JavaSccript file -->
-        <script type="text/javascript" src="Assets/javascript/game.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
 
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    </body>
 </html>
