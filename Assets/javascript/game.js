@@ -87,6 +87,7 @@ function resetGame() {
 // Main 
 // ------------------------------------------------------
 
+// Calling function to start game
 startGame();
 
 
