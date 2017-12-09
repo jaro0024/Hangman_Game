@@ -56,7 +56,7 @@ document.onkeypress = function (event) {
 // If correct guess count matches the length of the random word to be guessed, player wins. Wins count goes up, the game resets and restarts.
 function winLose() {
 
-    if (underscore.join("") == randomWord) {
+    if (underscore.join("") === randomWord) {
         wins++;
         document.getElementById("total-wins").innerHTML = wins;
         resetGame();
