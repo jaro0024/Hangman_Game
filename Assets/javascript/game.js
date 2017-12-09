@@ -17,7 +17,6 @@ var guess;
 // //To start game
 function startGame() {
     randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];
-    console.log(randomWord);
     for (var i = 0; i < randomWord.length; i++) {
         underscore.push('_');
     }
@@ -27,7 +26,6 @@ function startGame() {
 // To get user's guesses and check if it is correct. If it is correct, it replaces the underscore with the letter and correct guesses goes up by 1.
 document.onkeypress = function (event) {
     guess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(guess);
     if (randomWord.indexOf(guess) > -1) {
         for (var i = 0; i < randomWord.length; i++) {
             if (randomWord[i] === guess) {
