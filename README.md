@@ -1,4 +1,24 @@
 # Hangman_Game
+JavaScript Assignment
+Overview
+
+In this assignment, you'll create one of two possible computer games: Hangman or Psychic. These apps will run in the browser, and feature dynamically updated HTML powered by your JavaScript code.
+
+Before You Begin
+
+Create a new GitHub repo called Hangman-Game or Psychic-Game, in accordance with the assignment you choose to complete. Then, clone it to your computer.
+Inside your local git repository, create an index.html.
+While still in your local git repo, create a directory called assets.
+cd your way into the assets folder, then make three additional folders: javascript, css and images.
+In the javascript folder, make a file called game.js. Use the src attribute of the script tag to link to this file, rather than embedding the code directly in your HTML document.
+In the css folder, make a file called style.css.
+Also in the css folder, make a file called reset.css. Paste into it the code from the Meyerweb reset stylesheet. If you opt to use Bootstrap instead of writing your own CSS, skip this step, and simply include a link to Bootstrap via CDN.
+In the images folder, save whatever images you plan on using.
+Push the above changes to GitHub.
+Choose whichever game you'd like to build. Making the Psychic game will prove less challenging than coding Hangman. However, as the challenge of the Hangman exercise provides a more comprehensive review of this week's material, we suggest attempting that assignment first.
+Note: There's no shame if you'd prefer submitting Psychic—it's still a proper challenge.
+Push your selected game to Github Pages.
+
 Option Two: Hangman Game (Challenge - Recommended)
 Hangman
 Watch the demo.
@@ -12,6 +32,7 @@ As the user guesses the correct letters, reveal them: m a d o _  _ a.
 Number of Guesses Remaining: (# of guesses remaining for the user).
 Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
 After the user wins/loses the game should automatically choose another word and make the user play it.
+
 Hangman Game Bonuses
 
 Play a sound or song when the user guesses their word correctly, like in our demo.
@@ -22,6 +43,7 @@ Save any of your game's functions as methods, and call them underneath your obje
 Don't forget to place your global variables and functions above your object.
 Remember: global variables, then objects, then calls.
 Definitely talk with a TA or your instructor if you get tripped up during this challenge.
+
 A Few Tips
 
 IMPORTANT: Whichever assignment you choose, code your game one piece at a time! Code all of your apps one piece at a time. Always code one piece at a time!
@@ -39,3 +61,14 @@ That said, coding a functional app that also looks pretty would be impressive.
 Always commit your work and back it up with GitHub pushes. You don't want to lose hours of your work because you didn't push it to GitHub every half hour or so.
 Commit often.
 Turn in anything you have! Even if you don't finish, we still want to see what you were able to accomplish in the time we gave you. This will help us know what concepts we could help you with, as well as what topics we should focus on in the coming lectures.
+
+Minimum Requirements
+
+Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed.
+One More Thing
+
+If you have any questions about this project or the material we have covered, please post them in the community channels in slack so that your fellow developers can help you! If you're still having trouble, you can come to office hours for assistance from your instructor and TAs.
+Good Luck!
+
+Copyright
+Coding Boot Camp :copyright: 2016. All Rights Reserved.
