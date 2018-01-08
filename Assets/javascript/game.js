@@ -25,7 +25,7 @@ function startGame() {
 
 // To get user's guesses and check if it is correct. If it is correct, it replaces the underscore with the letter and correct guesses goes up by 1.
 document.onkeypress = function (event) {
-    guess = String.fromCharCode(event.keyCode).toLowerCase();
+    guess = String.fromCharCode(event.keyCode).toLowerCase();      
     if (randomWord.indexOf(guess) > -1) {
         for (var i = 0; i < randomWord.length; i++) {
             if (randomWord[i] === guess) {
